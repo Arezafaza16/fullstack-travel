@@ -8,7 +8,7 @@ export default function HeroSection() {
   const [banners, setBanners] = useState<any[]>([]);
   const heroRef = useRef<HTMLElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
-  const intervalRef = useRef<ReturnType<typeof setInterval>>();
+  const intervalRef = useRef<ReturnType<typeof setInterval>>(undefined);
 
   // Animate text content — scoped properly
   const animateText = useCallback(() => {
