@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { PenTool, Users, Map, LogOut, ChevronRight, X } from 'lucide-react';
 import { cn } from '../../utils/cn';
@@ -10,7 +9,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
-  const { user, logout, isOwner } = useAuth();
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
 
   const navigation = [

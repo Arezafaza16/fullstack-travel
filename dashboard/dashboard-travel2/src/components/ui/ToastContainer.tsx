@@ -1,4 +1,4 @@
-import { CheckCircle, XCircle, Info, X } from 'lucide-react';
+import { CheckCircle, XCircle, Info } from 'lucide-react';
 import { useToasts, type Toast } from '../../utils/toast';
 
 function ToastItem({ toast }: { toast: Toast }) {

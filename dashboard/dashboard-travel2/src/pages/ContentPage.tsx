@@ -3,15 +3,6 @@ import { CardEditor } from "../components/content/CardEditor";
 import { DestinationEditor } from "../components/content/DestinationEditor";
 import { ContactEditor } from "../components/content/ContactEditor";
 
-type Section = "hero" | "cards" | "destinations" | "contact";
-
-const nav: { key: Section; label: string }[] = [
-  { key: "hero", label: "Hero Banner" },
-  { key: "cards", label: "Paket Wisata" },
-  { key: "destinations", label: "Destinasi" },
-  { key: "contact", label: "Kontak" },
-];
-
 export function ContentPage() {
   return (
     <div className="max-w-6xl mx-auto pb-16 space-y-8">

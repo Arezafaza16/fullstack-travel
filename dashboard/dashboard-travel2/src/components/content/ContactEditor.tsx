@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Input } from "../ui/Input";
+// Input component not used here — using native <input> for fine control
 import { Phone, Mail, MapPin, MessageCircle, Building2, Loader2, PlusCircle, Save } from "lucide-react";
 import { api } from "../../lib/api";
 import { toast } from "../../utils/toast";
@@ -135,7 +135,7 @@ export function ContactEditor() {
 
           <div className="p-4 sm:p-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {fields.map(({ key, label, type, icon: Icon, placeholder, hint }) => (
+              {fields.map(({ key, label, type, icon: Icon, placeholder, ...rest }) => (
                 <div key={key} className="space-y-1.5">
                   <label className="flex items-center gap-1.5 text-sm font-medium text-slate-600">
                     <Icon className="w-3.5 h-3.5 text-slate-400" />
@@ -151,7 +151,7 @@ export function ContactEditor() {
                     placeholder={placeholder}
                     className="w-full h-10 border border-slate-200 rounded-lg px-3 text-sm text-slate-900 bg-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   />
-                  {hint && <p className="text-xs text-slate-400">{hint}</p>}
+                  {'hint' in rest && rest.hint && <p className="text-xs text-slate-400">{rest.hint}</p>}
                 </div>
               ))}
             </div>

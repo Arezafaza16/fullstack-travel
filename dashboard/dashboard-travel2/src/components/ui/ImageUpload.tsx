@@ -9,8 +9,8 @@ interface ImageUploadProps {
 }
 
 export function ImageUpload({ value, onChange, compact = false }: ImageUploadProps) {
-  const cloudinaryRef = useRef<any>();
-  const widgetRef = useRef<any>();
+  const cloudinaryRef = useRef<any>(undefined);
+  const widgetRef = useRef<any>(undefined);
   const onChangeRef = useRef(onChange);
   onChangeRef.current = onChange;
 
